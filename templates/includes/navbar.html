@@ -1,0 +1,44 @@
+
+<nav class="navbar navbar-expand-lg" id="navbar" style="z-index: 1;">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="{{ url_for('static', filename='images/tree3.png') }}" alt="Logo" width="120px" class="d-inline-block align-text-top">
+       
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="/app/pricing">Pricing</a>
+          </li>
+          {% if not "logged_in" in session %}
+          <li class="nav-item">
+            <a class="nav-link active" href="/app/register">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/app/login">Login</a>
+          </li>
+          {% else %}
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              My Profile
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/app/edit">Edit Links</a></li>
+              <li><a class="dropdown-item" href="/app/imageupload">Upload Profile Picture</a></li>
+              <li><a class="dropdown-item" href="/app/bg">Change Profile Background</a></li>
+              <li><a class="dropdown-item" href="/app/stats">See Stats</a></li>
+              <li><a class="dropdown-item" href="/{{session['username']}}">Preview Profile</a></li>
+              
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/app/logout">Logout</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>

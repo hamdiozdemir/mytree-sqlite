@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% include "includes/navbar.html" %}
+
+{% block body %}
+
+<div class="container">
+    <div style="display:flex; flex-direction:column; align-items:center;">
+        <h2><b>404 NOT FOUND</b></h2>
+        <img width="360px" height="auto" src="{{ url_for('static', filename='images/404.gif') }}" alt="">
+    </div>
+</div>
+
+
+
+{% endblock body %}

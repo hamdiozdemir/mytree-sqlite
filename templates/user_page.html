@@ -1,0 +1,204 @@
+{% extends 'layout2.html' %}
+{% include "includes/navbar.html" %}
+
+{% block style %}
+
+<link rel="stylesheet" href="{{url_for('static', filename='styles/'+user.bg_choice+'.css')}}">
+
+
+{% endblock style %}
+
+
+
+{% block body %}
+
+
+<div class="flex-container">
+
+<div class="image-field" style="{% if user.bg_choice == 'dark' %} color:white;  {% else %} color:black; {% endif %}">
+  <img class="avatar" src="{{ url_for('static', filename='uploads/'+user.image) }}" alt="">
+  <span class="username-field">
+    {{user.username}}
+  </span>
+
+</div>
+
+  {% if user_links.about != None and user_links.about != "" %}
+
+    <div class="text-field">
+      <pre>{{user_links.about}}</pre>
+    </div>
+
+
+{% endif %}
+
+{% if user_links.facebook != None and user_links.facebook != "" %}
+  <a href="/{{user.id}}/facebook/{{user_links.facebook}}" target="_blank">
+      <div class="link-button facebook">
+          <div class="logo"><img src="{{ url_for('static', filename='images/facebook.png') }}" alt="" height="75%"></div>
+          <div>FACEBOOK</div>
+      </div>
+  </a>
+{% endif %}
+
+{% if user_links.instagram != None and user_links.instagram != "" %}
+  <a href="/{{user.id}}/instagram/{{user_links.instagram}}" target="_blank">
+      <div class="link-button instagram">
+          <div class="logo"><img src="{{ url_for('static', filename='images/insta.png') }}" alt="" height="75%"></div>
+          <div>INSTAGRAM</div>
+      </div>
+  </a>
+{% endif %}
+
+{% if user_links.twitter != None and user_links.twitter != "" %}
+  <a href="/{{user.id}}/twitter/{{user_links.twitter}}" target="_blank">
+      <div class="link-button twitter">
+          <div class="logo"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="" height="75%"></div>
+          <div>TWITTER</div>
+      </div>
+  </a>
+{% endif %}
+
+{% if user_links.linkedin != None and user_links.linkedin != "" %}
+  <a href="/{{user.id}}/linkedin/{{user_links.linkedin}}" target="_blank">
+      <div class="link-button linkedin">
+          <div class="logo"><img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="" height="75%"></div>
+          <div>LINKEDIN</div>
+      </div>
+  </a>
+{% endif %}
+
+{% if user_links.github != None and user_links.github != "" %}
+  <a href="/{{user.id}}/github/{{user_links.github}}" target="_blank">
+      <div class="link-button github">
+          <div class="logo"><img src="{{ url_for('static', filename='images/github.png') }}" alt="" height="75%"></div>
+          <div>   GITHUB</div>
+      </div>
+  </a>
+{% endif %}
+
+{% if user_links.youtube != None and user_links.youtube != "" %}
+  <a href="/{{user.id}}/youtube/{{user_links.youtube}}" target="_blank">
+      <div class="link-button youtube">
+          <div class="logo"><img src="{{ url_for('static', filename='images/youtube.png') }}" alt="" height="75%"></div>
+          <div>YOUTUBE</div>
+      </div>
+  </a>
+{% endif %}
+
+{% if user_links.spotify != None and user_links.spotify != "" %}
+  <a href="/{{user.id}}/spotify/{{user_links.spotify}}" target="_blank">
+      <div class="link-button spotify">
+          <div class="logo"><img src="{{ url_for('static', filename='images/spotify.png') }}" alt="" height="75%"></div>
+          <div>SPOTIFY</div>
+      </div>
+  </a>
+{% endif %}
+
+{% if user_links.tiktok != None and user_links.tiktok != "" %}
+  <a href="/{{user.id}}/tiktok/{{user_links.tiktok}}" target="_blank">
+      <div class="link-button tiktok">
+          <div class="logo"><img src="{{ url_for('static', filename='images/tiktok.png') }}" alt="" height="75%"></div>
+          <div>TikTok</div>
+      </div>
+  </a>
+{% endif %}
+
+{% if user_links.website1_link != None and user_links.website1_link != "" %}
+  <a href="/{{user.id}}/website1/{{user_links.website1_link}}" target="_blank">
+      <div class="link-button website1">
+        <div class="logo"><img src="{{ url_for('static', filename='images/'+user_links.website1_icon) }}" alt="" height="65%"></div>
+          <div>{{user_links.website1_name}}</div>
+      </div>
+  </a>
+{% endif %}
+
+{% if user_links.website2_link != None and user_links.website2_link != "" %}
+  <a href="/{{user.id}}/website2/{{user_links.website2_link}}" target="_blank">
+      <div class="link-button website2">
+        <div class="logo"><img src="{{ url_for('static', filename='images/'+user_links.website2_icon) }}" alt="" height="65%"></div>
+          <div>{{user_links.website2_name}}</div>
+      </div>
+  </a>
+{% endif %}
+
+{% if user_links.website3_link != None and user_links.website3_link != "" %}
+  <a href="/{{user.id}}/website3/{{user_links.website3_link}}" target="_blank">
+      <div class="link-button website3">
+        <div class="logo"><img src="{{ url_for('static', filename='images/'+user_links.website3_icon) }}" alt="" height="65%"></div>
+          <div>{{user_links.website3_name}}</div>
+      </div>
+  </a>
+{% endif %}
+
+
+
+{% if user_links.website4_link != None and user_links.website4_link != "" %}
+  <a href="/{{user.id}}/website4/{{user_links.website4_link}}" target="_blank">
+      <div class="link-button website4">
+        <div class="logo"><img src="{{ url_for('static', filename='images/'+user_links.website4_icon) }}" alt="" height="65%"></div>
+          <div>{{user_links.website4_name}}</div>
+      </div>
+  </a>
+{% endif %}
+
+
+{% if user_links.website5_link != None and user_links.website5_link != "" %}
+  <a href="/{{user.id}}/website5/{{user_links.website5_link}}" target="_blank">
+      <div class="link-button website5">
+        <div class="logo"><img src="{{ url_for('static', filename='images/'+user_links.website5_icon) }}" alt="" height="65%"></div>
+          <div>{{user_links.website5_name}}</div>
+      </div>
+  </a>
+{% endif %}
+
+</div>
+
+<br>
+<br>
+
+<div style="text-align:center; font-family:Courier New;" >
+  <a href="/" style="{% if user.bg_choice == 'dark' %} color:white;  {% else %} color:black; {% endif %}">
+   <b>#MyTree</b> 
+  </a>
+</div>
+
+
+<div class="snowflakes" aria-hidden="true">
+  <div class="intro"> </div>
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❆
+  </div>
+  <div class="snowflake">
+  ❄
+  </div>
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❆
+  </div>
+  <div class="snowflake">
+  ❄
+  </div>
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❆
+  </div>
+  <div class="snowflake">
+  ❄
+  </div>
+</div>
+
+
+
+
+{% endblock body %}

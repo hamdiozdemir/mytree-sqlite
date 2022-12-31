@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% include "includes/navbar.html" %}
+
+
+{% block body %}
+{% from "includes/formhelpers.html" import render_field %}
+
+<div class="container">
+    <div class="wrap register">
+
+        <form method="POST">
+            <dl>
+            <div class="bg-container">
+                <input type="radio" name="bg_choice" id="basic" value="basic">
+                <input type="radio" name="bg_choice" id="simple" value="simple">
+                <input type="radio" name="bg_choice" id="circles" value="circles">
+                <input type="radio" name="bg_choice" id="stripes" value="stripes">
+                <input type="radio" name="bg_choice" id="dark" value="dark">
+                <input type="radio" name="bg_choice" id="newyear" value="newyear">
+
+                <label for="basic"><div class="bg-card bg-basic">basic</div></label>
+                <label for="simple"><div class="bg-card bg-simple">simple</div></label>
+                <label for="circles"><div class="bg-card bg-circles">circles</div></label>
+                <label for="stripes"><div class="bg-card bg-stripes">stripes</div></label>
+                <label for="dark"><div class="bg-card bg-dark">dark</div></label>
+                <label for="newyear"><div class="bg-card bg-newyear">newyear</div></label>
+            </div>
+            </dl>
+            <button type="submit" class="btn btn-dark btn-block">Change</button>
+          </form>
+    </div>
+
+</div>
+
+
+{% endblock body %}

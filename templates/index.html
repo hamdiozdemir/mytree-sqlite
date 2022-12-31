@@ -1,0 +1,64 @@
+{% extends 'layout.html' %}
+
+{% include "includes/navbar.html" %}
+
+{% block body %}
+
+
+<div class="main-flex">
+    <div class="main-text">
+
+        <h1>CREATE YOUR TREE <div class="roller">
+            <span id="rolltext">GATHER<br/>
+            COSTUMIZE<br/>
+            VIEW<br/>
+            <span id="spare-time">register now</span><br/>
+            </div>
+            </h1>
+    </div>
+</div>
+
+<hr>
+
+<b>
+<p style="text-align:center;">TOP 5 PROFILES</p>
+</b>
+
+<br>
+<br>
+<div class="card-container">
+
+    {% for user in users %}
+
+<a href="/{{user.Users.username}}">
+    <div class="main-card bg-{{user.Users.bg_choice}}" style="{% if user.Users.bg_choice == 'dark' %} color:white;  {% else %} color:black; {% endif %}">
+
+        <img class="avatar" src="{{ url_for('static', filename='uploads/'+user.Users.image) }}" alt="">
+        <div class="user">
+           <b>@{{user.Users.username}}</b> 
+        </div>
+        <div class="text-field" style="{% if user.Users.bg_choice == 'dark' %} color:white;  {% else %} color:black; {% endif %}">
+            <pre>{{user.Links.about}}</pre>
+        </div>
+        <div class="visitors">
+            {{user.Users.visitors}} views
+        </div>
+        
+
+        
+
+    </div>
+</a>    
+
+    {% endfor %}
+
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+{% endblock body %}

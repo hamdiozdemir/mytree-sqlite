@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+{% include "includes/navbar.html" %}
+
+
+{% block body %}
+
+<div class="container">
+
+    <div class="stats-container">
+        <div class="stats-number">
+            <h4 style="text-align:center;">TOTAL PROFILE VISIT</h5>
+            <div class="circle">
+                <span>{{session["visitors"]}}</span>
+            </div>
+        </div>
+    
+
+        <div class="chart-wrapper">
+            <canvas class="chart" id="profileVisits" style="width:100%"></canvas>
+        </div>
+
+
+
+
+        <div class="chart-wrapper">
+            <canvas class="chart" id="profileStats" style="width:100%"></canvas>
+        </div>
+    </div>
+
+
+
+</div>
+    
+
+
+
+
+
+<script>
+    var category = {{category | tojson}}
+    var category_visit = {{category_visit | tojson}}
+    var day = {{day | tojson}}
+    var day_visit = {{day_visit | tojson}}
+  </script>
+{% endblock body %}
+

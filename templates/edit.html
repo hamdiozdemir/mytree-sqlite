@@ -1,0 +1,225 @@
+{% extends 'layout.html' %}
+{% include "includes/navbar.html" %}
+
+
+{% block body %}
+{% from "includes/formhelpers.html" import render_field %}
+
+<div class="link-wrap container">
+
+    <form method="POST">
+        <dl>
+            {{ render_field(form.about, class ="form-control", placeholder="Please add your About information here. Max 140 character") }}
+            {{ render_field(form.facebook, class ="form-control", placeholder="Please add your Facebook Link here...") }}
+            {{ render_field(form.instagram, class ="form-control", placeholder="Please add your Instagram Link here...") }}    
+            {{ render_field(form.twitter, class ="form-control", placeholder="Please add your Twitter Link here...") }}    
+            {{ render_field(form.linkedin, class ="form-control", placeholder="Please add your LinkedIn Link here...") }}    
+            {{ render_field(form.github, class ="form-control", placeholder="Please add your GitHub Link here...") }}    
+            {{ render_field(form.youtube, class ="form-control", placeholder="Please add your Youtube Link here...") }}
+            {{ render_field(form.spotify, class ="form-control", placeholder="Please add your Spotify Link here...") }}
+            {{ render_field(form.tiktok, class ="form-control", placeholder="Please add your Tiktok Link here...") }}
+<hr>
+<h5><b>WEBSITE 1</b></h5>
+<i>You can select an icon for your link</i>
+<div class="icon-container">
+    <input type="radio" name="website1_icon" id="1link" value="link.png">
+    <input type="radio" name="website1_icon" id="1profile" value="profile.png">
+    <input type="radio" name="website1_icon" id="1dress" value="dress.png">
+    <input type="radio" name="website1_icon" id="1shop" value="shop.png">
+    <input type="radio" name="website1_icon" id="1light" value="light.png">
+    <input type="radio" name="website1_icon" id="1music" value="music.png">
+    <input type="radio" name="website1_icon" id="1video" value="video.png">
+    <input type="radio" name="website1_icon" id="1blog" value="blog.png">
+    <input type="radio" name="website1_icon" id="1chat" value="chat.png">
+    <input type="radio" name="website1_icon" id="1book" value="book.png">
+    <input type="radio" name="website1_icon" id="1coffee" value="coffee.png">
+    <input type="radio" name="website1_icon" id="1important" value="important.png">
+    <input type="radio" name="website1_icon" id="1sun" value="sun.png">
+    <input type="radio" name="website1_icon" id="1pet" value="pet.png">
+    <input type="radio" name="website1_icon" id="1none" value="None">
+
+    <label for="1link"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/link.png') }}" alt="link"></div></label>
+    <label for="1profile"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/profile.png') }}" alt="link"></div></label>
+    <label for="1dress"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/dress.png') }}" alt="link"></div></label>
+    <label for="1shop"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/shop.png') }}" alt="link"></div></label>
+    <label for="1light"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/light.png') }}" alt="link"></div></label>
+    <label for="1music"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/music.png') }}" alt="link"></div></label>
+    <label for="1video"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/video.png') }}" alt="link"></div></label>
+    <label for="1blog"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/blog.png') }}" alt="link"></div></label>
+    <label for="1chat"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/chat.png') }}" alt="link"></div></label>
+    <label for="1book"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/book.png') }}" alt="link"></div></label>
+    <label for="1coffee"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/coffee.png') }}" alt="link"></div></label>
+    <label for="1important"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/important.png') }}" alt="link"></div></label>
+    <label for="1sun"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/sun.png') }}" alt="link"></div></label>
+    <label for="1pet"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/pet.png') }}" alt="link"></div></label>
+    <label for="1none"><div class="icon-card">None</div></label>
+
+</div>
+            {{ render_field(form.website1_name, class ="form-control", placeholder="Enter a name for your link... eg: 'My Portfolio'") }}    
+            {{ render_field(form.website1_link, class ="form-control", placeholder="Enter the link of website.") }} 
+<hr>
+<h5><b>WEBSITE 2</b></h5>
+<i>You can select an icon for your link</i>
+<div class="icon-container">
+    <input type="radio" name="website2_icon" id="2link" value="link.png">
+    <input type="radio" name="website2_icon" id="2profile" value="profile.png">
+    <input type="radio" name="website2_icon" id="2dress" value="dress.png">
+    <input type="radio" name="website2_icon" id="2shop" value="shop.png">
+    <input type="radio" name="website2_icon" id="2light" value="light.png">
+    <input type="radio" name="website2_icon" id="2music" value="music.png">
+    <input type="radio" name="website2_icon" id="2video" value="video.png">
+    <input type="radio" name="website2_icon" id="2blog" value="blog.png">
+    <input type="radio" name="website2_icon" id="2chat" value="chat.png">
+    <input type="radio" name="website2_icon" id="2book" value="book.png">
+    <input type="radio" name="website2_icon" id="2coffee" value="coffee.png">
+    <input type="radio" name="website2_icon" id="2important" value="important.png">
+    <input type="radio" name="website2_icon" id="2sun" value="sun.png">
+    <input type="radio" name="website2_icon" id="2pet" value="pet.png">
+    <input type="radio" name="website2_icon" id="2none" value="None">
+
+    <label for="2link"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/link.png') }}" alt="link"></div></label>
+    <label for="2profile"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/profile.png') }}" alt="link"></div></label>
+    <label for="2dress"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/dress.png') }}" alt="link"></div></label>
+    <label for="2shop"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/shop.png') }}" alt="link"></div></label>
+    <label for="2light"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/light.png') }}" alt="link"></div></label>
+    <label for="2music"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/music.png') }}" alt="link"></div></label>
+    <label for="2video"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/video.png') }}" alt="link"></div></label>
+    <label for="2blog"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/blog.png') }}" alt="link"></div></label>
+    <label for="2chat"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/chat.png') }}" alt="link"></div></label>
+    <label for="2book"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/book.png') }}" alt="link"></div></label>
+    <label for="2coffee"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/coffee.png') }}" alt="link"></div></label>
+    <label for="2important"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/important.png') }}" alt="link"></div></label>
+    <label for="2sun"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/sun.png') }}" alt="link"></div></label>
+    <label for="2pet"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/pet.png') }}" alt="link"></div></label>
+    <label for="2none"><div class="icon-card">None</div></label>
+
+</div>
+            {{ render_field(form.website2_name, class ="form-control", placeholder="Enter a name for your link... eg: 'My Chart'") }}    
+            {{ render_field(form.website2_link, class ="form-control", placeholder="Enter the link of website.") }}
+<hr>
+<h5><b>WEBSITE 3</b></h5>
+<i>You can select an icon for your link</i>
+<div class="icon-container">
+    <input type="radio" name="website3_icon" id="3link" value="link.png">
+    <input type="radio" name="website3_icon" id="3profile" value="profile.png">
+    <input type="radio" name="website3_icon" id="3dress" value="dress.png">
+    <input type="radio" name="website3_icon" id="3shop" value="shop.png">
+    <input type="radio" name="website3_icon" id="3light" value="light.png">
+    <input type="radio" name="website3_icon" id="3music" value="music.png">
+    <input type="radio" name="website3_icon" id="3video" value="video.png">
+    <input type="radio" name="website3_icon" id="3blog" value="blog.png">
+    <input type="radio" name="website3_icon" id="3chat" value="chat.png">
+    <input type="radio" name="website3_icon" id="3book" value="book.png">
+    <input type="radio" name="website3_icon" id="3coffee" value="coffee.png">
+    <input type="radio" name="website3_icon" id="3important" value="important.png">
+    <input type="radio" name="website3_icon" id="3sun" value="sun.png">
+    <input type="radio" name="website3_icon" id="3pet" value="pet.png">
+    <input type="radio" name="website3_icon" id="3none" value="None">
+
+    <label for="3link"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/link.png') }}" alt="link"></div></label>
+    <label for="3profile"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/profile.png') }}" alt="link"></div></label>
+    <label for="3dress"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/dress.png') }}" alt="link"></div></label>
+    <label for="3shop"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/shop.png') }}" alt="link"></div></label>
+    <label for="3light"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/light.png') }}" alt="link"></div></label>
+    <label for="3music"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/music.png') }}" alt="link"></div></label>
+    <label for="3video"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/video.png') }}" alt="link"></div></label>
+    <label for="3blog"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/blog.png') }}" alt="link"></div></label>
+    <label for="3chat"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/chat.png') }}" alt="link"></div></label>
+    <label for="3book"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/book.png') }}" alt="link"></div></label>
+    <label for="3coffee"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/coffee.png') }}" alt="link"></div></label>
+    <label for="3important"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/important.png') }}" alt="link"></div></label>
+    <label for="3sun"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/sun.png') }}" alt="link"></div></label>
+    <label for="3pet"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/pet.png') }}" alt="link"></div></label>
+    <label for="3none"><div class="icon-card">None</div></label>
+
+</div>
+            {{ render_field(form.website3_name, class ="form-control", placeholder="Enter a name for your link... eg: 'Hey! Check This Out.'") }}    
+            {{ render_field(form.website3_link, class ="form-control", placeholder="Enter the link of website.") }}
+<hr>
+<h5><b>WEBSITE 4</b></h5>
+<i>You can select an icon for your link</i>
+<div class="icon-container">
+    <input type="radio" name="website4_icon" id="4link" value="link.png">
+    <input type="radio" name="website4_icon" id="4profile" value="profile.png">
+    <input type="radio" name="website4_icon" id="4dress" value="dress.png">
+    <input type="radio" name="website4_icon" id="4shop" value="shop.png">
+    <input type="radio" name="website4_icon" id="4light" value="light.png">
+    <input type="radio" name="website4_icon" id="4music" value="music.png">
+    <input type="radio" name="website4_icon" id="4video" value="video.png">
+    <input type="radio" name="website4_icon" id="4blog" value="blog.png">
+    <input type="radio" name="website4_icon" id="4chat" value="chat.png">
+    <input type="radio" name="website4_icon" id="4book" value="book.png">
+    <input type="radio" name="website4_icon" id="4coffee" value="coffee.png">
+    <input type="radio" name="website4_icon" id="4important" value="important.png">
+    <input type="radio" name="website4_icon" id="4sun" value="sun.png">
+    <input type="radio" name="website4_icon" id="4pet" value="pet.png">
+    <input type="radio" name="website4_icon" id="4none" value="None">
+
+    <label for="4link"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/link.png') }}" alt="link"></div></label>
+    <label for="4profile"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/profile.png') }}" alt="link"></div></label>
+    <label for="4dress"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/dress.png') }}" alt="link"></div></label>
+    <label for="4shop"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/shop.png') }}" alt="link"></div></label>
+    <label for="4light"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/light.png') }}" alt="link"></div></label>
+    <label for="4music"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/music.png') }}" alt="link"></div></label>
+    <label for="4video"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/video.png') }}" alt="link"></div></label>
+    <label for="4blog"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/blog.png') }}" alt="link"></div></label>
+    <label for="4chat"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/chat.png') }}" alt="link"></div></label>
+    <label for="4book"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/book.png') }}" alt="link"></div></label>
+    <label for="4coffee"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/coffee.png') }}" alt="link"></div></label>
+    <label for="4important"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/important.png') }}" alt="link"></div></label>
+    <label for="4sun"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/sun.png') }}" alt="link"></div></label>
+    <label for="4pet"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/pet.png') }}" alt="link"></div></label>
+    <label for="4none"><div class="icon-card">None</div></label>
+
+</div>
+            {{ render_field(form.website4_name, class ="form-control", placeholder="Enter a name for your link... eg: 'Support me!'") }}    
+            {{ render_field(form.website4_link, class ="form-control", placeholder="Enter the link of website.") }}
+<hr>
+<h5><b>WEBSITE 5</b></h5>
+<i>You can select an icon for your link</i>
+<div class="icon-container">
+    <input type="radio" name="website5_icon" id="5link" value="link.png">
+    <input type="radio" name="website5_icon" id="5profile" value="profile.png">
+    <input type="radio" name="website5_icon" id="5dress" value="dress.png">
+    <input type="radio" name="website5_icon" id="5shop" value="shop.png">
+    <input type="radio" name="website5_icon" id="5light" value="light.png">
+    <input type="radio" name="website5_icon" id="5music" value="music.png">
+    <input type="radio" name="website5_icon" id="5video" value="video.png">
+    <input type="radio" name="website5_icon" id="5blog" value="blog.png">
+    <input type="radio" name="website5_icon" id="5chat" value="chat.png">
+    <input type="radio" name="website5_icon" id="5book" value="book.png">
+    <input type="radio" name="website5_icon" id="5coffee" value="coffee.png">
+    <input type="radio" name="website5_icon" id="5important" value="important.png">
+    <input type="radio" name="website5_icon" id="5sun" value="sun.png">
+    <input type="radio" name="website5_icon" id="5pet" value="pet.png">
+    <input type="radio" name="website5_icon" id="5none" value="None">
+
+    <label for="5link"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/link.png') }}" alt="link"></div></label>
+    <label for="5profile"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/profile.png') }}" alt="link"></div></label>
+    <label for="5dress"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/dress.png') }}" alt="link"></div></label>
+    <label for="5shop"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/shop.png') }}" alt="link"></div></label>
+    <label for="5light"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/light.png') }}" alt="link"></div></label>
+    <label for="5music"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/music.png') }}" alt="link"></div></label>
+    <label for="5video"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/video.png') }}" alt="link"></div></label>
+    <label for="5blog"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/blog.png') }}" alt="link"></div></label>
+    <label for="5chat"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/chat.png') }}" alt="link"></div></label>
+    <label for="5book"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/book.png') }}" alt="link"></div></label>
+    <label for="5coffee"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/coffee.png') }}" alt="link"></div></label>
+    <label for="5important"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/important.png') }}" alt="link"></div></label>
+    <label for="5sun"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/sun.png') }}" alt="link"></div></label>
+    <label for="5pet"><div class="icon-card"><img class="icon-img" src="{{ url_for('static', filename='images/pet.png') }}" alt="link"></div></label>
+    <label for="5none"><div class="icon-card">None</div></label>
+
+</div>
+            {{ render_field(form.website5_name, class ="form-control", placeholder="Enter a name for your link... eg: 'Follow Me In Here'") }}    
+            {{ render_field(form.website5_link, class ="form-control", placeholder="Enter a name for your link... eg: My Portfolio") }}
+
+  
+        </dl>
+        <p><button type="submit" class="btn btn-dark">SAVE</button>
+      </form>
+
+
+</div>
+
+{% endblock body %}

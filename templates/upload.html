@@ -1,0 +1,23 @@
+{% from "includes/formhelpers.html" import render_field %}
+
+<label for="myfile">Select a file:</label>
+<input type="file" id="myfile" name="myfile">
+<input type="submit">
+
+
+<br>
+<hr>
+<br>
+
+<div class="wrap">
+
+    <form method="POST">
+        <dl>
+            {{ render_field(form.name, class ="form-control") }}
+            {{ render_field(form.file, class ="form-control") }}
+
+        </dl>
+        <p><button type="submit" class="btn btn-dark">Register</button>
+      </form>
+
+</div>
